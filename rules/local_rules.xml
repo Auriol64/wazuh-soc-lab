@@ -1,1 +1,17 @@
-
+<!-- Example -- >
+<group name="local, syslog, sshd, ">
+<! - -
+Dec 10 01:02:02 host sshd [1234] : Failed none for root from 1.1.1.1 port 1066 ssh2
+-- >
+<rule id="100001" level="5">
+<if_sid>5716</if_sid>
+<srcip>1.1.1.1</srcip>
+<description>sshd: authentication failed from IP 1.1.1.1. </description>
+</rule>
+group>authent icat ion_failed, pci_dss_10.2.4,pci_dss_10.2.5,</group>
+<rule id="100100" level="8">
+<if_sid>60122</if_sid>
+<field name="win.system.event ID">4625</field>
+</rule>
+<description>LAB SOC - Echec d'authentification detectee sur Windows 11</description>
+</group>
